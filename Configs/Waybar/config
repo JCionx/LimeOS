@@ -1,0 +1,141 @@
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar at the bottom of your screen
+    "height": 20, // Waybar height
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window", "wlr/taskbar"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "battery", "tray", "clock"],
+    
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "", 
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    
+         "sway/workspaces": {
+         "disable-scroll": false,
+         "all-outputs": false,
+         "format": "{icon}",
+         "format-icons": {
+             "01": "",
+             "02": "",
+             "03": "",
+             "04": "",
+             "05": "",
+             "06": "",
+             "07": "",
+             "08": "",
+             "09": "",
+             "10": "",
+             "11": "",
+             "12": "",
+             "13": "",
+             "14": "",
+             "15": "",
+             "16": "",
+             "17": "",
+             "18": "",
+             "19": "",
+             "20": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         },
+         
+       "persistant_workspaces": {
+         "01": ["HDMI-A-2"],
+         "02": ["HDMI-A-2"],
+         "03": ["HDMI-A-2"],
+         "04": ["HDMI-A-2"],
+         "05": ["HDMI-A-2"],
+         "06": ["HDMI-A-2"],
+         "07": ["HDMI-A-2"],
+         "08": ["HDMI-A-2"],
+         "09": ["HDMI-A-2"],
+         "10": ["HDMI-A-2"],
+         "11": ["HDMI-A-1"],
+         "12": ["HDMI-A-1"],
+         "13": ["HDMI-A-1"],
+         "14": ["HDMI-A-1"],
+         "15": ["HDMI-A-1"],
+         "16": ["HDMI-A-1"],
+         "17": ["HDMI-A-1"],
+         "18": ["HDMI-A-1"],
+         "19": ["HDMI-A-1"],
+         "20": ["HDMI-A-1"]
+         
+         }
+ 
+     },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "clock": {
+        "tooltip-format": "{:%a}",
+        "format": "{:%a %b %d, %H:%M}",
+        "format-alt": "{:%H:%M}"
+    },
+    "cpu": {
+        "format": "{usage}% "
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-full": "{capacity}%  ",
+        "format-icons": ["", "", ""]
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pavucontrol"
+    },
+ 
+    "tray": {
+    "icon-size": 18,
+    "spacing": 10
+    },
+    
+    "wlr/taskbar": {
+    "format": "{icon}",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "all-outputs": false,
+    "active-first": true,
+    "icon-size": 18,
+    "on-click-right": "minimize"
+    }
+    
+}
